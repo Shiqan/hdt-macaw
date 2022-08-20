@@ -27,10 +27,10 @@ jobs:
         msbuild.exe ./src/HDT.Plugins.Macaw.sln /p:GithubBuild="true" /p:Platform="Any CPU" /p:Configuration="Release"
 
     - name: Upload Artifact
-        uses: actions/upload-artifact@v3
-        with: 
-          name: artifact
-          path: ./src/HDT.Plugins.Macaw/bin/Release/HDT.Plugins.Macaw.dll
+      uses: actions/upload-artifact@v3
+      with: 
+        name: artifact
+        path: ./src/HDT.Plugins.Macaw/bin/Release/HDT.Plugins.Macaw.dll
           
   release:
     runs-on: ubuntu-latest
