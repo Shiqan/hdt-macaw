@@ -32,9 +32,6 @@ jobs:
     needs: build
     
     steps:
-    - name: Build Solution
-      run: |
-        msbuild.exe ./src/HDT.Plugins.Macaw.sln /p:GithubBuild="true" /p:Platform="Any CPU" /p:Configuration="Release"
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@1.17.2
       env:
